@@ -1,0 +1,34 @@
+﻿@model List<OgrenciNotMvc.Models.TBLKULÜPLER>
+@{
+    ViewBag.Title = "KulüpListesi";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Kulüpler</h2>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Kulüp Adı</th>
+                <th>Kulüp Kontenjan</th>
+                <th>Güncelle</th>
+                <th>Kaldır</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var kulüp in Model)
+            {
+                <tr>
+                    <td>@kulüp.KULUPID</td>
+                    <td>@kulüp.KULUPAD</td>
+                    <td>@kulüp.KULUPKONT</td>
+                    <td><a href="/Kulüp/KulüpGuncelle/@kulüp.KULUPID" class="btn btn-success">Güncelle</a></td>
+                    <td><a href="/Kulüp/KulüpSil/@kulüp.KULUPID" class="btn btn-danger">Kaldır</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/Kulüp/KulüpEkle" class="btn btn-primary">Yeni Kulüp Ekle</a>
+</div>
+

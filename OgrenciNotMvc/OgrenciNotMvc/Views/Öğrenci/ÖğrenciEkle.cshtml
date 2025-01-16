@@ -1,0 +1,87 @@
+﻿@model OgrenciNotMvc.Models.TBLOGRENCILER
+@{
+    ViewBag.Title = "ÖğrenciEkle";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2 class="panel-title">Öğrenci Ekleme Paneli</h2>
+
+<div class="container panel-container">
+    <form method="post" class="form-panel">
+        <div class="form-group">
+            <label for="ogrAd">Öğrenci Adı</label>
+            @Html.TextBoxFor(x => x.OGRAD, new { @class = "form-control", @id = "ogrAd", @placeholder = "Öğrenci adı giriniz" })
+        </div>
+        <div class="form-group">
+            <label for="ogrSoyad">Soyadı</label>
+            @Html.TextBoxFor(x => x.OGRSOYAD, new { @class = "form-control", @id = "ogrSoyad", @placeholder = "Öğrenci soyadı giriniz" })
+        </div>
+        <div class="form-group">
+            <label for="ogrFoto">Öğrenci Fotoğrafı</label>
+            @Html.TextBoxFor(x => x.OGRFOTO, new { @class = "form-control", @id = "ogrFoto", @placeholder = "Fotoğraf URL'si giriniz" })
+        </div>
+        <div class="form-group">
+            <label for="ogrCinsiyet">Cinsiyeti</label>
+            @Html.TextBoxFor(x => x.OGRCINSIYET, new { @class = "form-control", @id = "ogrCinsiyet", @placeholder = "Cinsiyet giriniz" })
+        </div>
+        <div class="form-group">
+            <label for="ogrKulup">Kulübü</label>
+            @Html.DropDownListFor(x => x.OGRKULUP, (SelectList)ViewBag.Kulüpler, "Kulüp Seçin", new { @class = "form-control", @id = "ogrKulup" })
+        </div>
+        <button type="submit" class="btn btn-primary save-button">Kaydet</button>
+    </form>
+</div>
+
+<style>
+    .panel-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #343a40;
+    }
+
+    .panel-container {
+        max-width: 700px;
+        margin: 20px auto;
+        padding: 30px;
+        border: 1px solid #ced4da;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background-color: #f8f9fa;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: 600;
+        color: #495057;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+    }
+
+    .save-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #17a2b8;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .save-button:hover {
+            background-color: #138496;
+        }
+</style>

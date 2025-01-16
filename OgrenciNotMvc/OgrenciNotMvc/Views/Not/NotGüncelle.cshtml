@@ -1,0 +1,111 @@
+﻿@model OgrenciNotMvc.Models.TBLNOTLAR
+@{
+    ViewBag.Title = "NotGüncelle";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2 class="text-center mb-4">Not Yönetimi</h2>
+<div class="container panel-container">
+    <form method="post"></form>
+    <div class="form-group">
+        @Html.HiddenFor(x => x.NOTID)
+        <label for="dersID" class="font-weight-bold">Ders Adı</label>
+        @Html.TextBoxFor(x => x.TBLDERSLER.DERSAD, new { @class = "form-control", @id = "dersID", @placeholder = "Dersi giriniz" })
+        <label for="ogrenciId" class="font-weight-bold">Öğrenci Adı</label>
+        @Html.TextBoxFor(x => x.TBLOGRENCILER.OGRAD, new { @class = "form-control", @id = "ogrenciId", @placeholder = "Öğrenci ID giriniz" })
+        <label for="ogrencıSınav1" class="font-weight-bold">Sınav 1</label>
+        @Html.TextBoxFor(x => x.SINAV1, new { @class = "form-control", @id = "ogrencıSınav1", @placeholder = "1.Sınavı giriniz" })
+        <label for="ogrencıSınav2" class="font-weight-bold">Sınav 2</label>
+        @Html.TextBoxFor(x => x.SINAV2, new { @class = "form-control", @id = "ogrencıSınav2", @placeholder = "2.Sınavı giriniz" })
+        <label for="ogrencıSınav3" class="font-weight-bold">Sınav 3</label>
+        @Html.TextBoxFor(x => x.SINAV3, new { @class = "form-control", @id = "ogrencıSınav3", @placeholder = "3.Sınavı giriniz" })
+        <label for="ogrencıProje" class="font-weight-bold">Proje</label>
+        @Html.TextBoxFor(x => x.PROJE, new { @class = "form-control", @id = "ogrencıProje", @placeholder = "Proje notunu giriniz" })
+        <label for="ogrencıOrtalama" class="font-weight-bold">Ortalama</label>
+        @Html.TextBoxFor(x => x.ORTALAMA, new { @class = "form-control", @id = "ogrencıOrtalama", @placeholder = "" })
+        <label for="ogrencıDurum" class="font-weight-bold">Durum</label>
+        @Html.TextBoxFor(x => x.DURUM, new { @class = "form-control", @id = "ogrencıDurum", @placeholder = "" })
+    </div>
+    <div class="mt-3 text-right">
+        <button type="submit" class="btn btn-info px-4 py-2">
+            <i class="fas fa-sync-alt"></i> Kaydet
+        </button>
+        <button type="button" class="btn btn-secondary px-4 py-2 ml-2" onclick="hesaplaOrtalama()">
+            <i class="fas fa-calculator"></i> Hesapla
+        </button>
+    </div>
+</div>
+
+<script>
+    function hesaplaOrtalama() {
+        var sinav1 = parseFloat(document.getElementById('ogrencıSınav1').value) || 0;
+        var sinav2 = parseFloat(document.getElementById('ogrencıSınav2').value) || 0;
+        var sinav3 = parseFloat(document.getElementById('ogrencıSınav3').value) || 0;
+        var proje = parseFloat(document.getElementById('ogrencıProje').value) || 0;
+
+        var ortalama = (sinav1 + sinav2 + sinav3 + proje) / 4;
+        document.getElementById('ogrencıOrtalama').value = ortalama.toFixed(2); // Ortalama 2 ondalık basamakta gösterilir
+
+        // Durum kontrolü
+        var durum = ortalama >= 50 ? "Geçti" : "Kaldı";
+        document.getElementById('ogrencıDurum').value = durum;
+    }
+</script>
+
+
+
+
+<style>
+    .panel-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #343a40;
+    }
+
+    .panel-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 25px;
+        border: 1px solid #ced4da;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #f8f9fa;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: 600;
+        color: #495057;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+    }
+
+    .save-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .save-button:hover {
+            background-color: #0056b3;
+        }
+</style>

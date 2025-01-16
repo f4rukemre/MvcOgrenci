@@ -1,0 +1,33 @@
+﻿@model List<OgrenciNotMvc.Models.TBLDERSLER>
+
+@{
+    ViewBag.Title = "DersListesi";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Dersler</h2>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Ders Adı</th>
+                <th>Güncelle</th>
+                <th>Kaldır</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ders in Model)
+            {
+                <tr>
+                    <td>@ders.DERSID</td>
+                    <td>@ders.DERSAD</td>
+                    <td><a href="/Ders/GuncelleDers/@ders.DERSID" class="btn btn-success">Güncelle</a></td>
+                    <td><a href="/Ders/DersSil/@ders.DERSID" class="btn btn-danger">Kaldır</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/Ders/DersEkle" class="btn btn-primary">Yeni Ders Ekle</a>
+</div>

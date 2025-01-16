@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "DersEkle";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2 class="panel-title">Ders Ekleme Paneli</h2>
+
+<div class="container panel-container">
+    <form method="post" class="form-panel">
+        <div class="form-group">
+            <label for="dersAd">Ders Adı</label>
+            <input type="text" id="dersAd" name="DERSAD" class="form-control" placeholder="Ders adı giriniz" />
+        </div>
+        <button type="submit" class="btn btn-primary save-button">Kaydet</button>
+    </form>
+</div>
+
+<style>
+    .panel-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #343a40;
+    }
+
+    .panel-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 25px;
+        border: 1px solid #ced4da;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #f8f9fa;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: 600;
+        color: #495057;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+    }
+
+    .save-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .save-button:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+

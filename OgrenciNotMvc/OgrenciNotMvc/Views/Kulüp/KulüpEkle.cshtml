@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "KulüpEkle";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2 class="panel-title">Kulüp Ekleme Paneli</h2>
+
+<div class="container panel-container">
+    <form method="post" class="form-panel">
+        <div class="form-group">
+            <label for="kulupAd">Kulüp Adı</label>
+            <input type="text" id="kulupAd" name="KULUPAD" class="form-control" placeholder="Kulüp adı giriniz" />
+        </div>
+        <div class="form-group">
+            <label for="kulupKont">Kulüp Kontenjan</label>
+            <input type="text" id="kulupKont" name="KULUPKONT" class="form-control" placeholder="Kulüp kontenjanı giriniz" />
+        </div>
+        <button type="submit" class="btn btn-primary save-button">Kaydet</button>
+    </form>
+</div>
+
+<style>
+    .panel-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #343a40;
+    }
+
+    .panel-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 25px;
+        border: 1px solid #ced4da;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #f8f9fa;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: 600;
+        color: #495057;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+    }
+
+    .save-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #28a745;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .save-button:hover {
+            background-color: #218838;
+        }
+</style>

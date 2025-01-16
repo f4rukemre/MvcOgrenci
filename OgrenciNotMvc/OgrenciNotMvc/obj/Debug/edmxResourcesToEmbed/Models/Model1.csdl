@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbMvcOkulModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TBLDERSLER">
+    <Key>
+      <PropertyRef Name="DERSID" />
+    </Key>
+    <Property Name="DERSID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DERSAD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBLNOTLAR" Relationship="Self.FK_TBLNOTLAR_TBLDERSLER" FromRole="TBLDERSLER" ToRole="TBLNOTLAR" />
+  </EntityType>
+  <EntityType Name="TBLKULÜPLER">
+    <Key>
+      <PropertyRef Name="KULUPID" />
+    </Key>
+    <Property Name="KULUPID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KULUPAD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KULUPKONT" Type="Int32" />
+    <NavigationProperty Name="TBLOGRENCILER" Relationship="Self.FK_TBLOGRENCILER_TBLKULÜPLER" FromRole="TBLKULÜPLER" ToRole="TBLOGRENCILER" />
+  </EntityType>
+  <EntityType Name="TBLNOTLAR">
+    <Key>
+      <PropertyRef Name="NOTID" />
+    </Key>
+    <Property Name="NOTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DERSID" Type="Byte" />
+    <Property Name="OGRID" Type="Int32" />
+    <Property Name="SINAV1" Type="Byte" />
+    <Property Name="SINAV2" Type="Byte" />
+    <Property Name="SINAV3" Type="Byte" />
+    <Property Name="PROJE" Type="Byte" />
+    <Property Name="ORTALAMA" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DURUM" Type="Boolean" />
+    <NavigationProperty Name="TBLDERSLER" Relationship="Self.FK_TBLNOTLAR_TBLDERSLER" FromRole="TBLNOTLAR" ToRole="TBLDERSLER" />
+    <NavigationProperty Name="TBLOGRENCILER" Relationship="Self.FK_TBLNOTLAR_TBLOGRENCILER" FromRole="TBLNOTLAR" ToRole="TBLOGRENCILER" />
+  </EntityType>
+  <EntityType Name="TBLOGRENCILER">
+    <Key>
+      <PropertyRef Name="OGRID" />
+    </Key>
+    <Property Name="OGRID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OGRAD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OGRSOYAD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OGRFOTO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="OGRCINSIYET" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="OGRKULUP" Type="Byte" />
+    <NavigationProperty Name="TBLKULÜPLER" Relationship="Self.FK_TBLOGRENCILER_TBLKULÜPLER" FromRole="TBLOGRENCILER" ToRole="TBLKULÜPLER" />
+    <NavigationProperty Name="TBLNOTLAR" Relationship="Self.FK_TBLNOTLAR_TBLOGRENCILER" FromRole="TBLOGRENCILER" ToRole="TBLNOTLAR" />
+  </EntityType>
+  <Association Name="FK_TBLNOTLAR_TBLDERSLER">
+    <End Role="TBLDERSLER" Type="Self.TBLDERSLER" Multiplicity="0..1" />
+    <End Role="TBLNOTLAR" Type="Self.TBLNOTLAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLDERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="TBLNOTLAR">
+        <PropertyRef Name="DERSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLOGRENCILER_TBLKULÜPLER">
+    <End Role="TBLKULÜPLER" Type="Self.TBLKULÜPLER" Multiplicity="0..1" />
+    <End Role="TBLOGRENCILER" Type="Self.TBLOGRENCILER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLKULÜPLER">
+        <PropertyRef Name="KULUPID" />
+      </Principal>
+      <Dependent Role="TBLOGRENCILER">
+        <PropertyRef Name="OGRKULUP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLNOTLAR_TBLOGRENCILER">
+    <End Role="TBLOGRENCILER" Type="Self.TBLOGRENCILER" Multiplicity="0..1" />
+    <End Role="TBLNOTLAR" Type="Self.TBLNOTLAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLOGRENCILER">
+        <PropertyRef Name="OGRID" />
+      </Principal>
+      <Dependent Role="TBLNOTLAR">
+        <PropertyRef Name="OGRID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DbMvcOkulEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TBLDERSLER" EntityType="Self.TBLDERSLER" />
+    <EntitySet Name="TBLKULÜPLER" EntityType="Self.TBLKULÜPLER" />
+    <EntitySet Name="TBLNOTLAR" EntityType="Self.TBLNOTLAR" />
+    <EntitySet Name="TBLOGRENCILER" EntityType="Self.TBLOGRENCILER" />
+    <AssociationSet Name="FK_TBLNOTLAR_TBLDERSLER" Association="Self.FK_TBLNOTLAR_TBLDERSLER">
+      <End Role="TBLDERSLER" EntitySet="TBLDERSLER" />
+      <End Role="TBLNOTLAR" EntitySet="TBLNOTLAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLOGRENCILER_TBLKULÜPLER" Association="Self.FK_TBLOGRENCILER_TBLKULÜPLER">
+      <End Role="TBLKULÜPLER" EntitySet="TBLKULÜPLER" />
+      <End Role="TBLOGRENCILER" EntitySet="TBLOGRENCILER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLNOTLAR_TBLOGRENCILER" Association="Self.FK_TBLNOTLAR_TBLOGRENCILER">
+      <End Role="TBLOGRENCILER" EntitySet="TBLOGRENCILER" />
+      <End Role="TBLNOTLAR" EntitySet="TBLNOTLAR" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

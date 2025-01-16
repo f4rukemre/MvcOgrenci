@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "NotEkle";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2 class="panel-title">Ders Ekleme Paneli</h2>
+
+<div class="container panel-container">
+    <form method="post" class="form-panel">
+        <div class="form-group">
+            <label for="dersAd">Ders ID</label>
+            <input type="text" id="dersAd" name="DERSID" class="form-control" placeholder="Ders ID giriniz" />
+        </div>
+        <div class="form-group">
+            <label for="dersAd">Öğrenci ID</label>
+            <input type="text" id="dersAd" name="OGRID" class="form-control" placeholder="Öğrenci ID giriniz" />
+        </div>
+        <div class="form-group">
+            <label for="dersAd">Sınav 1</label>
+            <input type="text" id="dersAd" name="SINAV1" class="form-control" placeholder="Sınav 1 giriniz" />
+        </div>
+        <div class="form-group">
+            <label for="dersAd">Sınav 2</label>
+            <input type="text" id="dersAd" name="SINAV2" class="form-control" placeholder="Sınav 2 giriniz" />
+        </div>
+        <div class="form-group">
+            <label for="dersAd">Sınav 3</label>
+            <input type="text" id="dersAd" name="SINAV3" class="form-control" placeholder="Sınav 3 giriniz" />
+        </div>
+        <div class="form-group">
+            <label for="dersAd">Proje</label>
+            <input type="text" id="dersAd" name="PROJE" class="form-control" placeholder="Proje giriniz" />
+        </div>
+        <div class="form-group">
+            <label for="dersAd">Ortalama</label>
+            <input type="text" id="dersAd" name="ORTALAMA" class="form-control" placeholder="Ortalama" />
+        </div>
+        <div class="form-group">
+            <label for="dersAd">Durum</label>
+            <input type="text" id="dersAd" name="DURUM" class="form-control" placeholder="Durum" />
+        </div>
+        <button type="submit" class="btn btn-primary save-button">Kaydet</button>
+    </form>
+</div>
+
+<style>
+    .panel-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #343a40;
+    }
+
+    .panel-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 25px;
+        border: 1px solid #ced4da;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #f8f9fa;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: 600;
+        color: #495057;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+    }
+
+    .save-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .save-button:hover {
+            background-color: #0056b3;
+        }
+</style>

@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\90551\\source\\repos\\OgrenciNotMvc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{747173FC-93A8-472C-A88C-35F43EE9252E}|OgrenciNotMvc\\OgrenciNotMvc.csproj|c:\\users\\90551\\source\\repos\\ogrencinotmvc\\ogrencinotmvc\\views\\adminlayout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{747173FC-93A8-472C-A88C-35F43EE9252E}|OgrenciNotMvc\\OgrenciNotMvc.csproj|solutionrelative:ogrencinotmvc\\views\\adminlayout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747173FC-93A8-472C-A88C-35F43EE9252E}|OgrenciNotMvc\\OgrenciNotMvc.csproj|c:\\users\\90551\\source\\repos\\ogrencinotmvc\\ogrencinotmvc\\views\\\u0130leti\u015Fim\\\u0130leti\u015Fim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{747173FC-93A8-472C-A88C-35F43EE9252E}|OgrenciNotMvc\\OgrenciNotMvc.csproj|solutionrelative:ogrencinotmvc\\views\\\u0130leti\u015Fim\\\u0130leti\u015Fim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747173FC-93A8-472C-A88C-35F43EE9252E}|OgrenciNotMvc\\OgrenciNotMvc.csproj|c:\\users\\90551\\source\\repos\\ogrencinotmvc\\ogrencinotmvc\\controllers\\\u0130leti\u015Fimcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{747173FC-93A8-472C-A88C-35F43EE9252E}|OgrenciNotMvc\\OgrenciNotMvc.csproj|solutionrelative:ogrencinotmvc\\controllers\\\u0130leti\u015Fimcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747173FC-93A8-472C-A88C-35F43EE9252E}|OgrenciNotMvc\\OgrenciNotMvc.csproj|c:\\users\\90551\\source\\repos\\ogrencinotmvc\\ogrencinotmvc\\views\\adminlayout\\partialsidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{747173FC-93A8-472C-A88C-35F43EE9252E}|OgrenciNotMvc\\OgrenciNotMvc.csproj|solutionrelative:ogrencinotmvc\\views\\adminlayout\\partialsidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747173FC-93A8-472C-A88C-35F43EE9252E}|OgrenciNotMvc\\OgrenciNotMvc.csproj|c:\\users\\90551\\source\\repos\\ogrencinotmvc\\ogrencinotmvc\\views\\\u00F6\u011Frenci\\\u00F6\u011Frencilistesi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{747173FC-93A8-472C-A88C-35F43EE9252E}|OgrenciNotMvc\\OgrenciNotMvc.csproj|solutionrelative:ogrencinotmvc\\views\\\u00F6\u011Frenci\\\u00F6\u011Frencilistesi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747173FC-93A8-472C-A88C-35F43EE9252E}|OgrenciNotMvc\\OgrenciNotMvc.csproj|c:\\users\\90551\\source\\repos\\ogrencinotmvc\\ogrencinotmvc\\views\\\u00F6\u011Frenci\\\u00F6\u011Frencig\u00FCncelle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{747173FC-93A8-472C-A88C-35F43EE9252E}|OgrenciNotMvc\\OgrenciNotMvc.csproj|solutionrelative:ogrencinotmvc\\views\\\u00F6\u011Frenci\\\u00F6\u011Frencig\u00FCncelle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\90551\\source\\repos\\OgrenciNotMvc\\OgrenciNotMvc\\Views\\AdminLayout\\Index.cshtml",
+              "RelativeDocumentMoniker": "OgrenciNotMvc\\Views\\AdminLayout\\Index.cshtml",
+              "ToolTip": "C:\\Users\\90551\\source\\repos\\OgrenciNotMvc\\OgrenciNotMvc\\Views\\AdminLayout\\Index.cshtml",
+              "RelativeToolTip": "OgrenciNotMvc\\Views\\AdminLayout\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T01:14:55.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "\u0130leti\u015Fim.cshtml",
+              "DocumentMoniker": "C:\\Users\\90551\\source\\repos\\OgrenciNotMvc\\OgrenciNotMvc\\Views\\\u0130leti\u015Fim\\\u0130leti\u015Fim.cshtml",
+              "RelativeDocumentMoniker": "OgrenciNotMvc\\Views\\\u0130leti\u015Fim\\\u0130leti\u015Fim.cshtml",
+              "ToolTip": "C:\\Users\\90551\\source\\repos\\OgrenciNotMvc\\OgrenciNotMvc\\Views\\\u0130leti\u015Fim\\\u0130leti\u015Fim.cshtml",
+              "RelativeToolTip": "OgrenciNotMvc\\Views\\\u0130leti\u015Fim\\\u0130leti\u015Fim.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswA8AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T01:05:52.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "\u0130leti\u015FimController.cs",
+              "DocumentMoniker": "C:\\Users\\90551\\source\\repos\\OgrenciNotMvc\\OgrenciNotMvc\\Controllers\\\u0130leti\u015FimController.cs",
+              "RelativeDocumentMoniker": "OgrenciNotMvc\\Controllers\\\u0130leti\u015FimController.cs",
+              "ToolTip": "C:\\Users\\90551\\source\\repos\\OgrenciNotMvc\\OgrenciNotMvc\\Controllers\\\u0130leti\u015FimController.cs",
+              "RelativeToolTip": "OgrenciNotMvc\\Controllers\\\u0130leti\u015FimController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T01:05:42.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PartialSidebar.cshtml",
+              "DocumentMoniker": "C:\\Users\\90551\\source\\repos\\OgrenciNotMvc\\OgrenciNotMvc\\Views\\AdminLayout\\PartialSidebar.cshtml",
+              "RelativeDocumentMoniker": "OgrenciNotMvc\\Views\\AdminLayout\\PartialSidebar.cshtml",
+              "ToolTip": "C:\\Users\\90551\\source\\repos\\OgrenciNotMvc\\OgrenciNotMvc\\Views\\AdminLayout\\PartialSidebar.cshtml",
+              "RelativeToolTip": "OgrenciNotMvc\\Views\\AdminLayout\\PartialSidebar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T00:59:49.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "\u00D6\u011FrenciG\u00FCncelle.cshtml",
+              "DocumentMoniker": "C:\\Users\\90551\\source\\repos\\OgrenciNotMvc\\OgrenciNotMvc\\Views\\\u00D6\u011Frenci\\\u00D6\u011FrenciG\u00FCncelle.cshtml",
+              "RelativeDocumentMoniker": "OgrenciNotMvc\\Views\\\u00D6\u011Frenci\\\u00D6\u011FrenciG\u00FCncelle.cshtml",
+              "ToolTip": "C:\\Users\\90551\\source\\repos\\OgrenciNotMvc\\OgrenciNotMvc\\Views\\\u00D6\u011Frenci\\\u00D6\u011FrenciG\u00FCncelle.cshtml",
+              "RelativeToolTip": "OgrenciNotMvc\\Views\\\u00D6\u011Frenci\\\u00D6\u011FrenciG\u00FCncelle.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T00:56:41.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "\u00D6\u011FrenciListesi.cshtml",
+              "DocumentMoniker": "C:\\Users\\90551\\source\\repos\\OgrenciNotMvc\\OgrenciNotMvc\\Views\\\u00D6\u011Frenci\\\u00D6\u011FrenciListesi.cshtml",
+              "RelativeDocumentMoniker": "OgrenciNotMvc\\Views\\\u00D6\u011Frenci\\\u00D6\u011FrenciListesi.cshtml",
+              "ToolTip": "C:\\Users\\90551\\source\\repos\\OgrenciNotMvc\\OgrenciNotMvc\\Views\\\u00D6\u011Frenci\\\u00D6\u011FrenciListesi.cshtml",
+              "RelativeToolTip": "OgrenciNotMvc\\Views\\\u00D6\u011Frenci\\\u00D6\u011FrenciListesi.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T00:42:32.963Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

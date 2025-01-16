@@ -1,0 +1,46 @@
+﻿@model List<OgrenciNotMvc.Models.TBLNOTLAR>
+@{
+    ViewBag.Title = "NotListesi";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Notlar</h2>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Ders Adı</th>
+                <th>Öğrenci</th>
+                <th>Sınav 1</th>
+                <th>Sınav 2</th>
+                <th>Sınav 3</th>
+                <th>Proje</th>
+                <th>Ortalama</th>
+                <th>Durum</th>
+                <th>Güncelle</th>
+                <th>Kaldır</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var not in Model)
+            {
+                <tr>
+                    <td>@not.NOTID</td>
+                    <td>@not.TBLDERSLER.DERSAD</td>
+                    <td>@not.TBLOGRENCILER.OGRAD</td>
+                    <td>@not.SINAV1</td>
+                    <td>@not.SINAV2</td>
+                    <td>@not.SINAV3</td>
+                    <td>@not.PROJE</td>
+                    <td>@not.ORTALAMA</td>
+                    <td>@not.DURUM</td>
+                    <td><a href="/Not/NotGüncelle/@not.NOTID" class="btn btn-success">Güncelle</a></td>
+                    <td><a href="/Not/NotSil/@not.NOTID" class="btn btn-danger">Kaldır</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/Not/Not Ekle" class="btn btn-primary">Yeni Not Ekle</a>
+</div>
+
